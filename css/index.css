@@ -6,6 +6,10 @@
 html {
     scroll-behavior: smooth;
 }
+html,
+body {
+    min-width: 500px;
+}
 body {
     width: 100%;
     height: 100vh;
@@ -41,7 +45,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    position:relative
+    position: relative;
 }
 .image1 {
     width: 300px;
@@ -55,13 +59,38 @@ body {
 }
 .info {
     color: rgba(255, 255, 255, 0.9);
-    text-align: center;
     margin: 30px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
 }
-.info h1 {
+.h1 {
+    
+    display: inline-block;
     font-size: 40px;
     margin-bottom: 60px;
+    overflow: hidden;
+    animation: gw1 5s steps(44) 2s both, font 1s steps(44) forwards 9;
 }
+.h2{
+    overflow: hidden;
+    display: inline-block;
+    animation: gw2 5s steps(44) 11s both, font 1s steps(44) 9.5s forwards 9;
+}
+.h3{
+    overflow: hidden;
+    display: inline-block;
+    animation: gw2 5s steps(44) 20s both, font 1s steps(44) 18.5s forwards 9;
+}
+.h4{
+    overflow: hidden;
+    display: inline-block;
+    animation: gw3 5s steps(44) 29s both, font 1s steps(44) 27.5s forwards infinite;
+}
+
 .content1 a {
     text-decoration: none;
 }
@@ -103,30 +132,30 @@ body {
     width: 100%;
     flex: 9;
     display: flex;
-
 }
-.idc span{
+.idc span {
     display: inline-block;
-    padding-right:6em;
+    padding-right: 6em;
 }
-.aboutme1,.aboutme2,.aboutme3 {
+.aboutme1,
+.aboutme2,
+.aboutme3 {
     flex: 1;
-    min-width: 300px;;
+    min-width: 300px;
     padding-left: 5em;
-    padding-top:50px; 
+    padding-top: 50px;
     /*white-space: nowrap;*/
     overflow: hidden;
     text-overflow: ellipsis;
     /*控制文字不换行超出省略*/
 }
 
-.aboutme1 h1{
+.aboutme1 h1 {
     font-size: 40px;
-    color:white;
-    
+    color: white;
 }
-.aboutme1 h3{
-    color:rgb(255, 255, 255);
+.aboutme1 h3 {
+    color: rgb(255, 255, 255);
 }
 
 .anchor2 {
@@ -134,7 +163,7 @@ body {
 }
 .arrow2 {
     position: absolute;
-    bottom:20%;
+    bottom: 20%;
     width: 25px;
     height: 25px;
     border-right: 2px solid rgba(236, 226, 226, 0.9);
@@ -155,7 +184,7 @@ body {
 }
 .arrow3 {
     position: absolute;
-    bottom:10%;
+    bottom: 10%;
     width: 25px;
     height: 25px;
     border-right: 2px solid rgba(236, 226, 226, 0.9);
@@ -171,8 +200,8 @@ body {
     flex-direction: column;
     align-items: center;
 }
-#bottom h1,#bottom
-p {
+#bottom h1,
+#bottom p {
     text-align: center;
 }
 .lxfs {
@@ -211,5 +240,37 @@ p {
     }
     100% {
         transform: translateY(0px) rotate(45deg);
+    }
+}
+@keyframes font {
+    from {
+        border-right: 2px solid rgba(0,0,0,0.9);
+    }
+    to {
+        border-right: 2px solid transparent;
+    }
+}
+@keyframes gw1 {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 600px;
+    }
+}
+@keyframes gw2 {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 495px;
+    }
+}
+@keyframes gw3 {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 375px;
     }
 }
