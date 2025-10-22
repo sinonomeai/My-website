@@ -244,7 +244,7 @@ body {
 }
 @keyframes font {
     from {
-        border-right: 2px solid rgba(0,0,0,0.9);
+        border-right: 2px solid rgba(255, 255, 255, 0.9);
     }
     to {
         border-right: 2px solid transparent;
